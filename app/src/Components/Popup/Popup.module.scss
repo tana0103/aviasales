@@ -1,0 +1,15 @@
+@use '../../styles/variables.scss' as var;
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	width: 20em;
+	height: 10em;
+	background: var.$colorBgPopup;
+	top:100%;
+	right: 0;
+	border-radius: 1em;
+	position: absolute;
+}

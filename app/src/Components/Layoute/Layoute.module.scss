@@ -1,0 +1,31 @@
+@use '../../styles/variables.scss' as var;
+
+.container{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background: var.$colorBlue;
+	padding: 1em;
+}
+
+.main{
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex: 1;
+}
+
+.footer{
+	width: 100%;
+	background: var.$colorBlue;
+	padding: 1em;
+}

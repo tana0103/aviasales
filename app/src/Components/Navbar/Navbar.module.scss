@@ -1,0 +1,131 @@
+@use '../../styles/variables.scss' as var;
+
+h1 {
+   margin: 0 0 8px;
+   font-family: var(--brand-text-font-family);
+   font-size: 2.75rem;
+   font-weight: 700;
+   font-variant-numeric: lining-nums;
+   line-height: 3.5625rem;
+   color: var.$colorWhite;
+}
+
+h3 {
+   margin: 0 0 5px;
+   font-family: var(--brand-text-font-family);
+   font-size: 1.35rem;
+   font-weight: 700;
+   font-variant-numeric: lining-nums;
+   line-height: 3.5625rem;
+   color: var.$colorWhite;
+}
+
+.menu {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   display: grid;
+   width: 50%;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   gap: 0.2em;
+   padding: 0.2em;
+   border-radius: 0.2em;
+   background: var.$colorBlue;
+   position: relative;
+   z-index: 0;
+}
+
+.go {
+   width: calc(50% - 0.4em);
+   position: absolute;
+   margin: 0.2em;
+   left: 0;
+   top: 0;
+   height: calc(100% - 0.4em);
+   background: rgb(253, 252, 252);
+   border-radius: 0.5em;
+   transition: left var.$transitionBtn;
+}
+
+.btn {
+   background: transparent;
+   border-radius: 0.5em;
+   border: none;
+   padding: 0.5em 1em;
+   color: var.$colorWhite;
+   text-transform: capitalize;
+   z-index: 1;
+
+   &:hover {
+      box-shadow: inset 0px 0px 30px 4px wheat, 0px 0px 2px 1px wheat;
+   }
+}
+
+.active {
+   background: transparent;
+
+   &:hover {
+      box-shadow: none;
+   }
+}
+
+.input_box{
+   width: 100%;
+   display: grid;
+   gap: .1em;
+   border-radius: 1em;
+   overflow: hidden;
+   grid-template-columns: repeat(6, 1fr);
+   // grid-template-rows: repeat(2, 1fr);
+   grid-template-areas: 'countryFrom countryTo dataFrom dataTo colvoPassazhirov submitBtn' 
+   // 'dataFrom dataTo colvoPassazhirov submitBtn';
+   // grid-template-areas: 'countryFrom countryFrom countryTo countryTo' 
+   // 'dataFrom dataTo colvoPassazhirov submitBtn';
+}
+
+.inputElement{
+   padding: 1.2em;
+   border: none;
+}
+
+.from{
+   grid-area: countryFrom;
+}
+
+.to{
+   grid-area: countryTo;
+}
+
+.dataFrom{
+   grid-area: dataFrom;
+}
+
+.dataTo{
+   grid-area: dataTo;
+}
+
+.colvoPassazhirov{
+   grid-area: colvoPassazhirov;
+   border-radius: 0em 1em 1em 0em;
+}
+
+.input_box .submitBtn{
+   grid-area: submitBtn;
+   background: var.$colorSubmitBtn;
+   color: var.$colorWhite;
+   border-radius: 1em;
+
+   &:hover{
+      background: var.$colorSubmitBtnHover;
+   }
+
+   &:active{
+      background: var.$colorSubmitBtnActive;
+   }
+}
